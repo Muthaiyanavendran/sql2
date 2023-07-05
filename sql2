@@ -1,0 +1,38 @@
+create database chessmatch;
+use chessmatch;
+create table player(
+st_id int primary key,
+st_name varchar(7),
+st_age int,
+st_skills varchar(50));
+
+insert into  player values(1,"karthi",20,"diamond");
+insert into player values(2,"selva",21,"master");
+insert into  player values(3,"gusi",21,"Grandmaster");
+insert into player values(4,"Abu",19,"master");
+insert into  player values(5,"Raya",20,"ultralegend");
+
+select * from player;
+select * from player
+where  st_skills like 'G%';
+
+select max(st_age) from player;
+
+update player
+set st_skills ="Normal player"
+where st_id=1;
+
+select * from player;
+
+
+delete from player
+
+where st_id=4;
+
+
+
+
+
+
+
+
